@@ -13,12 +13,16 @@
 
 	if(status){  
 		out.println("You are successfully logged in");  
-		session.setAttribute("session","TRUE");  
+		session.setAttribute("session","TRUE");
+		session.setAttribute("name", obj.getFname());
+%>  
+		<jsp:forward page="test.jsp"></jsp:forward>  
+<%  
 	}else{  
 		out.println("<span style='color:red'>Sorry, email or password error, try again, if you have not registered</span></br>");  
 		out.println("<a href='register.jsp'>Register Here</a>"); 
 %>  
-	<jsp:include page="login.jsp"></jsp:include>  
+		<jsp:include page="login.jsp"></jsp:include>  
 <%  
 	}  
 %>  

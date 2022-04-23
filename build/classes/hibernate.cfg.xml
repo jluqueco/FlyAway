@@ -36,7 +36,8 @@
         <property name="hbm2ddl.auto">update</property>
 		<!--  <property name="hbm2ddl.auto">update</property> -->
 		
-		<mapping class = "com.to.User"/>
+		<mapping class = "model.User"/>
+		<mapping class = "model.FlightDetails"/>
 
     </session-factory>
 </hibernate-configuration>
