@@ -2,11 +2,23 @@ package model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
 public class User {
+	@Id
+	@Column(length = 50)
 	private String email;
+	@Column(length = 50)
 	private String fname;
+	@Column(length = 50)
 	private String lname;
 	private Date dob;
+	@Column(length = 50)
 	private String password;
 	private String typeOfDocument;
 	private String docNumber;
@@ -91,6 +103,18 @@ public class User {
 	 */
 	public void setDob(Date dob) {
 		this.dob = dob;
+	}
+	
+	/**
+	 * @param dob the dob to set
+	 * 1983-09-01
+	 * 0123456789
+	 */
+	public void setDob(String dob) {
+		int year = Integer.parseInt(dob.substring(0, 3));
+		int month = Integer.parseInt(dob.substring(5, 6));
+		int day = Integer.parseInt(dob.substring(8, 9));
+		this.dob = new Date(year,month,day);
 	}
 
 	/**
