@@ -1,4 +1,4 @@
-
+<%@ page import="model.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!--  %@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %--> 
@@ -20,9 +20,9 @@
 			select * from FlightDetails
 		</sql:query--> 
 	
-		<h1>Hello <% out.print(session.getAttribute("name")); %></h1> 
+		<h1>Welcome</h1> 
 		<h2>Enter data to filter flights</h2>
-		<form action="flights.jsp" method="post">
+		<form action="searchflightprocess.jsp" method="post">
 			<table> 
 				<tr>
 					<td>Origin City:</td>
@@ -52,7 +52,7 @@
 		            			<option value="${row.departureDate}">${row.departureDate}</option>
 		            		</c:forEach>
 		    			</select-->
-		    			<input type="date" name="origincity"/>
+		    			<input type="date" name="ddate"/>
 					</td>
 					<td>
 						<input type="submit" value="Search"/>

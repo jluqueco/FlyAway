@@ -18,7 +18,7 @@ public class FlightDetails {
 	private String airline;
 	private double price;
 	private String originCity;
-	private String destionationCity;
+	private String destinationCity;
 	private String departureTime;
 	private String arrivalTime;
 	private Date departureDate;
@@ -42,7 +42,7 @@ public class FlightDetails {
 		this.airline = airline;
 		this.price = price;
 		this.originCity = originCity;
-		this.destionationCity = destionationCity;
+		this.destinationCity = destionationCity;
 		this.departureTime = departureTime;
 		this.arrivalTime = arrivalTime;
 	}
@@ -120,15 +120,15 @@ public class FlightDetails {
 	/**
 	 * @return the destionationCity
 	 */
-	public String getDestionationCity() {
-		return destionationCity;
+	public String getDestinationCity() {
+		return destinationCity;
 	}
 
 	/**
 	 * @param destionationCity the destionationCity to set
 	 */
-	public void setDestionationCity(String destionationCity) {
-		this.destionationCity = destionationCity;
+	public void setDestinationCity(String destionationCity) {
+		this.destinationCity = destionationCity;
 	}
 
 	/**
@@ -190,7 +190,7 @@ public class FlightDetails {
 	@Override
 	public String toString() {
 		return "FlightDetails [flightNumber=" + flightNumber + ", airline=" + airline + ", price=" + price
-				+ ", originCity=" + originCity + ", destionationCity=" + destionationCity + ", departureTime="
+				+ ", originCity=" + originCity + ", destionationCity=" + destinationCity + ", departureTime="
 				+ departureTime + ", arrivalTime=" + arrivalTime + "]";
 	}
 	
