@@ -47,7 +47,7 @@
 		</tr>
 	</table>
 	<form action="bookingconfirmation.jsp">
-		<button type="submit" style="background-color: #a2b9bc;font-size: 16px;">Confirm</button>
+		<button type="submit" style="background-color: #82b74b;font-size: 16px;">Confirm</button>
 		<button type="submit" style="background-color: #c94c4c;font-size: 16px;"formaction="searchflights.jsp">Cancel</button>
 	</form>
 </body>

@@ -14,7 +14,7 @@
 	is: <b><%out.print(NumberFormat.getCurrencyInstance().format(((FlightDetails)(session.getAttribute("flight"))).getPrice())); %></b></p>
 	
 	<form action="paymentconfirmation.jsp">
-		<button type="submit" style="background-color: #a2b9bc;font-size: 16px;">Pay</button>
+		<button type="submit" style="background-color: #82b74b;font-size: 16px;">Pay</button>
 		<button type="submit" style="background-color: #c94c4c;font-size: 16px;"formaction="searchflights.jsp">Cancel</button>
 	</form>
 </body>
