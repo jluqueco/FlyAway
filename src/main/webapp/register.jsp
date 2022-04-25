@@ -26,10 +26,10 @@
 					<td>Type of Document: </td>
 					<td>
 						<select name="typeOfDocument">
-							    <option value="dl">DL</option>
-							    <option value="passport">Passport</option>
-							    <option value="ssn">SSN</option>
-							    <option value="other">Other</option>
+							    <option value="Driver License">Driver License</option>
+							    <option value="Passport">Passport</option>
+							    <option value="SSN">SSN</option>
+							    <option value="Other">Other</option>
 	  					</select>
 					</td>
 				</tr>

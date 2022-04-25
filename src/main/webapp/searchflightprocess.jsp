@@ -24,6 +24,7 @@
 			String destinationCity = request.getParameter("destinationcity");
 			String ddate = request.getParameter("ddate");
 			flights = DAOObj.flights(originCity, destinationCity, ddate);
+			session.setAttribute("flight", null);
 			
 			if(flights == null){
 				%>
@@ -54,7 +55,7 @@
 						<td><%out.print(DateFormat.getDateInstance().format(f.getArrivalDate())); %></td>
 						<td><%out.print(f.getArrivalTime()); %></td>
 						<td><%out.print(NumberFormat.getCurrencyInstance().format(f.getPrice())); %></td>
-						<td><a href="registerbooking.jsp?flightId="<%f.getFlightId(); %> >Click Here</a></td>
+						<td><a href="registerbooking.jsp?flightId=<%= f.getFlightId() %>" >Click Here</a></td>
 					</tr>
 			<% 	} %>
 		</table>

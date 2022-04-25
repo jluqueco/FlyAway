@@ -35,7 +35,7 @@ public class FlightDetailsDAO {
 		return list;
 	}
 	
-	public FlightDetails getFlight(int id) {
+	public static FlightDetails getFlight(int id) {
 		Configuration configuration = new Configuration().configure();
 		configuration.addAnnotatedClass(FlightDetails.class);
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
@@ -44,7 +44,7 @@ public class FlightDetailsDAO {
 		
 		try(Session session = factory.openSession()){
 			Query<FlightDetails> q = null;
-			q = session.createQuery("From FlightDetails where flightId = '"+ id );
+			q = session.createQuery("From FlightDetails where flightId = "+ id );
 			
 			flight = q.getSingleResult();
 		}
